@@ -10,7 +10,8 @@ from packaging import version
 from omegaconf import OmegaConf
 from torch.utils.data import random_split, DataLoader, Dataset, Subset
 from functools import partial
-from PIL import Image
+from PIL import Image, ImageFile
+ImageFile.LOAD_TRUNCATED_IMAGES = True
 
 from pytorch_lightning import seed_everything
 from pytorch_lightning.trainer import Trainer
